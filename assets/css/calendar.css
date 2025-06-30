@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+.fc-day-sun a { /* 일요일 컬러 */
+    color: var(--sun);
+}
+
+.fc-day-sat a { /* 토요일 컬러 */
+    color: var(--set);
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0;
+    border-bottom: 3px solid var(--front3);
+    padding-bottom: 18px;
+}
+
+.fc .fc-view-harness {
+    margin-top: 18px;
+}
+
+.fc .fc-button {
+    border: none;
+    background-color: transparent;
+}
+
+.fc .fc-button .fc-icon {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fc .fc-button:hover {
+    background-color: transparent;
+}
+
+/* active 시 (눌렀을 때) */
+.fc-prev-button:active,
+.fc-next-button:active {
+    background-color: transparent !important; /* 진한 배경 */
+}
+
+/* focus 시 (탭 이동 등) */
+.fc-prev-button:focus,
+.fc-next-button:focus {
+    box-shadow: none !important;
+}
+
+.fc .fc-button-group {
+    gap: 16px;
+}
+
+.fc .fc-scrollgrid {
+    border: 0
+}
+
+.fc-scrollgrid-sync-inner {
+    text-align: left;
+}
+
+.fc .fc-daygrid-day-frame {
+    padding: 10px 0;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: transparent;
+}
+
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-top .fc-daygrid-day-number {
+    color: var(--color-white);
+    background-color: var(--primary);
+    border-radius: 50%;
+
+}
+
+.fc-h-event {
+    background-color: transparent;
+    border: none;
+    color: #000;
+}
+
+.fc-event-title {
+    color: var(--primary);
+}
+
+.fc .fc-daygrid-day-top {
+    justify-content: start;
+}
+
+.fc-theme-standard td, .fc-theme-standard th {
+    border: 0 !important;
+}
+
+.fc .fc-view-harness {
+    border-bottom: 3px solid var(--front3);
+}
+
+.fc-day-disabled {
+    pointer-events: none;
+    background: #fff !important; /* 필요시 배경색 고정 */
+}
+
+/* 이번 달의 disabled 날짜에만 opacity 적용 */
+.fc-daygrid-day.fc-day-disabled:not(.fc-day-other) {
+    opacity: 0.3;
+}
+
+.fc-event {
+    pointer-events: none;
+}
+
+.fc-event-minus .fc-event-title {
+    color: var(--color-primary) !important; /* 음수 값: 주황색 */
+}
+
+.fc-event-plus .fc-event-title {
+    color: #007aff !important;
+}
