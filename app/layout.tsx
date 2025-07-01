@@ -3,9 +3,34 @@ import localFont from 'next/font/local';
 import './globals.css';
 import 'swiper/css';
 import Footer from '@/components/Footer';
+import { Metadata } from 'next';
 
 const pretendard = localFont({ src: '../assets/PretendardVariable.woff2' });
-
+export const metadata: Metadata = {
+  title: 'Tetherbase - 최고의 페이백 플랫폼',
+  description: '테더베이스에서 거래하고 최대 페이백을 받으세요. Bitget, Gate, BingX 등 제휴 거래소 이벤트 제공.',
+  keywords: ['Tetherbase', '테더베이스', '페이백 거래소', '거래소 이벤트', '비트겟 이벤트', '게이트 이벤트'],
+  openGraph: {
+    title: 'Tetherbase - 최고의 페이백 플랫폼',
+    description: 'Bitget, Gate, BingX 등 다양한 거래소 이벤트 및 페이백!',
+    url: 'https://tetherbase.io',
+    siteName: 'Tetherbase',
+    images: [
+      {
+        url: 'https://tetherbase.io/og-image.jpg', // public 폴더 안에 og-image.jpg 넣기
+        alt: 'Tetherbase 대표 이미지',
+      },
+    ],
+    locale: 'ko_KR',
+    type: 'website',
+  },
+  verification: {
+    google: 'QT1g6o094F9SSL4-rE23PlY8DookiBihMaZC6Fdk9pg',
+  },
+  other: {
+    'naver-site-verification': '67719e394e32c5fb2e3d005fac8f86f48985ffea',
+  },
+};
 export default async function RootLayout({
   children,
 }: Readonly<{
