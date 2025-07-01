@@ -20,7 +20,7 @@ function EventPage({ eventList, bannerList }: DefaultProps) {
         <div className="container mx-auto py-12">
           <div className={'text-center'}>
             <h2>
-              테더베이스 ds<span className={'text-primary'}>제휴 이벤트</span>
+              테더베이스 <span className={'text-primary'}>제휴 이벤트</span>
             </h2>
             <p className={'text-front2 font-semibold mb-5'}>
               테더베이스에서만 확인할 수 있는 이벤트입니다.

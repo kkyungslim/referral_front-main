@@ -152,8 +152,8 @@ function PartnerTab({
         </ScrollArea>
         {tabData.map((item) => (
           <TabsContent value={item.value} key={item.value}>
-            <PaybackExchangeListPC data={data} value={item.value} />
-            <PaybackExchangeListMO data={data} value={item.value} />
+            <PaybackExchangeListPC data={data} value={item.value} serverEventData={serverEventData}/>
+            <PaybackExchangeListMO data={data} value={item.value} serverEventData={serverEventData}/>
           </TabsContent>
         ))}
       </Tabs>

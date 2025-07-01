@@ -13,50 +13,58 @@ import FireIcon from '@/components/icons/FireIcon';
 import InfiniteIcon from '@/components/icons/InfiniteIcon';
 import ChartIcon from '@/components/icons/ChartIcon';
 import { Badge } from '@/components/ui/badge';
-import { PaybackExchangeData, Tab } from '@/lib/types';
+import { PaybackExchangeData, Tab, TEvent } from '@/lib/types';
 import { useRouter } from 'next/navigation';
 
 function PaybackExchangeListPC({
-  data,
-  value,
-}: {
+                                 data,
+                                 value,
+                                 serverEventData
+                               }: {
   data: PaybackExchangeData[];
   value: Tab['value'];
+  serverEventData: TEvent[];
 }) {
   const router = useRouter();
+
+  // ✅ 서버 이벤트 이름 → 프론트 이름 매핑 (필요 시 확장)
+  const eventNameMap: Record<string, string> = {
+    GATEIO: 'Gate',
+    BITGET: 'Bitget',
+    BINGX: 'BingX',
+    HTX: 'HTX',
+    OKX: 'OKX'
+  };
+
+  // ✅ 매핑된 프론트 거래소 이름으로 Set 생성
+  const eventExchangeSet = new Set(
+    (serverEventData ?? []).map((e) => {
+      const upper = e.name.toUpperCase();
+      return eventNameMap[upper] ?? e.name;
+    })
+  );
+
   return (
     <Table className={'md:table hidden'}>
       <TableHeader>
         <TableRow>
           <TableHead className="font-semibold text-black">거래소명</TableHead>
-          <TableHead className="font-semibold text-black text-center">
-            점수
-          </TableHead>
-          <TableHead className="font-semibold text-black text-center">
-            페이백율%
-          </TableHead>
-          <TableHead className="font-semibold text-black text-center">
-            거래 할인율%
-          </TableHead>
-          <TableHead className="font-semibold text-black text-center">
-            1인 평균 환급금
-          </TableHead>
-          <TableHead className="font-semibold text-black text-center">
-            지정가%
-          </TableHead>
-          <TableHead className="font-semibold text-black text-center">
-            시장가%
-          </TableHead>
+          <TableHead className="font-semibold text-black text-center">점수</TableHead>
+          <TableHead className="font-semibold text-black text-center">페이백율%</TableHead>
+          <TableHead className="font-semibold text-black text-center">거래 할인율%</TableHead>
+          <TableHead className="font-semibold text-black text-center">1인 평균 환급금</TableHead>
+          <TableHead className="font-semibold text-black text-center">지정가%</TableHead>
+          <TableHead className="font-semibold text-black text-center">시장가%</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
-        {data
+        {(data ?? [])
           .filter((exchange) => {
             if (value === 'All') return true;
             if (value === 'Recommendation' && exchange.score > 9.5) return true;
             if (
               value === 'Event' &&
-              parseInt(exchange.avgRefund.replace(/[^0-9]/g, '')) >= 1000000
+              eventExchangeSet.has(exchange.exchangeName)
             ) {
               return true;
             }
@@ -67,7 +75,9 @@ function PaybackExchangeListPC({
               return true;
             if (value === 'Designation' && exchange.limitPrice > 0.01)
               return true;
-            if (value === 'Market' && exchange.marketPrice > 0.02) return true;
+            if (value === 'Market' && exchange.marketPrice > 0.02)
+              return true;
+            return false;
           })
           .map((partner, index) => (
             <TableRow
