@@ -128,14 +128,14 @@ export type UIDSearchRequest = {
 export type TDate = string; //
 
 export type TEvent = {
-  name: string;
-  type: TEventType; // 우선 임시로 뒀습니다. 아마 항상 empty String 일듯
-  marketName: string;
-  description: string;
-  startDate: TDate;
-  endDate: TDate;
-  targetUrl: string;
-  imageUrl: string | StaticImport;
+  name?: string;
+  type?: TEventType; // 우선 임시로 뒀습니다. 아마 항상 empty String 일듯
+  marketName?: string;
+  description?: string;
+  startDate?: TDate;
+  endDate?: TDate;
+  targetUrl?: string;
+  imageUrl?: string | StaticImport;
 };
 
 export type TEventType = 'POPULAR' | 'RECOMMEND';

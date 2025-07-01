@@ -13,8 +13,7 @@ function PartnerEvent({ eventList }: DefaultProps) {
       <div className="container mx-auto mt-20">
         <div className="flex justify-between items-center md:items-end mb-5">
           <h2 className={'text-lg md:text-2xl'}>
-            <span className="text-primary ">테더베이스</span>와 함께 하는
-            이벤트!
+            <span className="text-primary ">테더베이스</span>와 함께 하는 이벤트!
           </h2>
           <Link href={'/event'} className="text-front2">
             전체보기 &gt;

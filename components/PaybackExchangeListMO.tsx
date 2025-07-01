@@ -5,27 +5,46 @@ import FireIcon from '@/components/icons/FireIcon';
 import InfiniteIcon from '@/components/icons/InfiniteIcon';
 import ChartIcon from '@/assets/icons/chartIcon.svg';
 import { Badge } from '@/components/ui/badge';
-import { PaybackExchangeData, Tab } from '@/lib/types';
+import { PaybackExchangeData, Tab, TEvent } from '@/lib/types';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 function PaybackExchangeListMO({
-  data,
-  value,
-}: {
+                                 data,
+                                 value,
+                                 serverEventData,
+                               }: {
   data: PaybackExchangeData[];
   value: Tab['value'];
+  serverEventData: TEvent[];
 }) {
   const router = useRouter();
+
+  // ✅ 서버 거래소 이름 → 프론트 거래소 이름 매핑 테이블
+  const eventNameMap: Record<string, string> = {
+    GATEIO: 'Gate',
+    BITGET: 'Bitget',
+    BINGX: 'BingX',
+    HTX: 'HTX',
+    OKX: 'OKX'
+  };
+
+  const eventExchangeSet = new Set(
+    (serverEventData ?? []).map((e) => {
+      const upper = e.name.toUpperCase();
+      return eventNameMap[upper] ?? e.name;
+    })
+  );
+
   return (
     <div className=" flex md:hidden flex-col gap-2">
-      {data
+      {(data ?? [])
         .filter((exchange) => {
           if (value === 'All') return true;
           if (value === 'Recommendation' && exchange.score > 9.5) return true;
           if (
             value === 'Event' &&
-            parseInt(exchange.avgRefund.replace(/[^0-9]/g, '')) >= 1000000
+            eventExchangeSet.has(exchange.exchangeName)
           ) {
             return true;
           }
