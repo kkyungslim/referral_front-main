@@ -7,33 +7,33 @@ export async function GET(): Promise<Response> {
   const routes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/`,
-      lastModified: '2025-07-01',
+      lastModified: '2025-07-02',
       changeFrequency: 'daily',
       priority: 1.0,
     },
     {
       url: `${baseUrl}/event`,
-      lastModified: '2025-07-01',
+      lastModified: '2025-07-02',
     },
     {
       url: `${baseUrl}/partner`,
-      lastModified: '2025-07-01',
+      lastModified: '2025-07-02',
     },
     {
       url: `${baseUrl}/payback`,
-      lastModified: '2025-07-01',
+      lastModified: '2025-07-02',
     },
     {
       url: `${baseUrl}/intro`,
-      lastModified: '2025-07-01',
+      lastModified: '2025-07-02',
     },
     {
       url: `${baseUrl}/search`,
-      lastModified: '2025-07-01',
+      lastModified: '2025-07-02',
     },
     {
       url: `${baseUrl}/history`,
-      lastModified: '2025-07-01',
+      lastModified: '2025-07-02',
     },
   ];
 
