@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ['thetherbase.s3.ap-northeast-2.amazonaws.com'], // 허용할 도메인 추가
+    domains: ['thetherbase.s3.ap-northeast-2.amazonaws.com' , 'lim-tetherbase.s3.ap-northeast-2.amazonaws.com/'], // 허용할 도메인 추가
   },
 };
 
