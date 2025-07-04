@@ -16,7 +16,7 @@ function HTXAccountFAQPage() {
           </p>
         </div>
         <div className={'flex flex-col gap-4 mt-10'}>
-          <Link href={'#'}>
+          <Link href={'https://t.me/a0s2d3f4w1q'} target={'_blank'}>
             <Card className={'flex-row justify-between items-center'}>
               <div className="flex items-start gap-1">
                 <p className={'font-bold text-primary md:text-lg text-sm'}>
@@ -34,7 +34,7 @@ function HTXAccountFAQPage() {
               <Badge className={'rounded-4xl text-xs'}>상담 연결</Badge>
             </Card>
           </Link>
-          <Link href={'#'}>
+          <Link href={'https://t.me/a0s2d3f4w1q'} target={'_blank'}>
             <Card className={'flex-row justify-between items-center'}>
               <div className="flex items-start gap-1">
                 <p className={'font-bold text-primary md:text-lg text-sm'}>
