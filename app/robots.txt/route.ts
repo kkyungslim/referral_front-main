@@ -1,4 +1,3 @@
-// app/robots.txt/route.ts
 export async function GET(): Promise<Response> {
   const content = `
     User-Agent: *

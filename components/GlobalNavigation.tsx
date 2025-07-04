@@ -7,8 +7,8 @@ import EventIcon from '@/components/icons/EventIcon';
 import PcNavigation from '@/components/PcNavigation';
 import MobileNavigation from '@/components/MobileNavigation';
 import LogoWhiteIcon from '@/components/icons/LogoWhiteIcon';
-import { serverPathname, serverUser } from '@/lib/server/ServerUtils';
-import { DefaultProps, MobileNavItem, NavItem, User } from '@/lib/types';
+import { serverPathname } from '@/lib/server/ServerUtils';
+import { DefaultProps, MobileNavItem, NavItem } from '@/lib/types';
 
 const pcNavItem: NavItem[] = [
   { name: '제휴 거래소', href: '/partner' },
@@ -40,8 +40,6 @@ const mobileNavItem: MobileNavItem[] = [
 ];
 
 async function GlobalNavigation({ user }: DefaultProps) {
-  const loggedIn = user !== undefined;
-  const notLoggedIn = user === undefined;
 
   const pathName = await serverPathname();
   const isIntroPage = pathName === '/intro';
@@ -61,7 +59,7 @@ async function GlobalNavigation({ user }: DefaultProps) {
                 <LogoWhiteIcon width={162} height={29} />
               )}
             </Link>
-            <span className="sr-only">TetherBase</span>
+            <span className="sr-only">테더베이스 셀퍼럴</span>
           </h1>
           {/* PC navigation */}
           <PcNavigation

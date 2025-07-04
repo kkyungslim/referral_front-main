@@ -3,6 +3,22 @@ import { serverUser } from '@/lib/server/ServerUtils';
 import React, { Fragment } from 'react';
 import PartnerPage from './PartnerPage';
 import { APIEventList, APIGetBanner } from '@/lib/API';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '제휴 거래소 - 테더베이스',
+  description: '테더베이스와 제휴된 거래소 목록을 확인하세요. Bitget, Gate, BingX 등 셀퍼럴 가능한 거래소 소개.',
+  keywords: ['제휴 거래소', 'Bitget 셀퍼럴', 'Gate 제휴', '테더베이스 파트너'],
+  openGraph: {
+    title: '제휴 거래소 - 테더베이스',
+    description: '테더베이스에서 셀퍼럴이 가능한 제휴 거래소 안내',
+    url: 'https://tetherbase.io/partner',
+    siteName: '테더베이스',
+    images: [{ url: 'https://tetherbase.io/og-partner.jpg', alt: '거래소 리스트 이미지' }],
+    locale: 'ko_KR',
+    type: 'website',
+  },
+};
 
 async function Parnter() {
   const user = await serverUser();
