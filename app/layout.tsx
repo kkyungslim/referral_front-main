@@ -4,6 +4,7 @@ import './globals.css';
 import 'swiper/css';
 import Footer from '@/components/Footer';
 import { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 
 const pretendard = localFont({ src: '../assets/PretendardVariable.woff2' });
 export const metadata: Metadata = {
@@ -64,6 +65,7 @@ export default async function RootLayout({
       <body className={`${pretendard.className} antialiased`}>
         <NextTopLoader color="#ff6900" showSpinner={false} height={2} />
         {children}
+        <Analytics/>
         <Footer></Footer>
       </body>
     </html>
