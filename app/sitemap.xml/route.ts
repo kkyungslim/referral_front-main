@@ -1,41 +1,26 @@
-// app/sitemap.xml/route.ts
 import { type MetadataRoute } from 'next';
 
 export async function GET(): Promise<Response> {
   const baseUrl = 'https://www.tetherbase.io';
 
-  const routes: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/`,
-      lastModified: '2025-07-02',
-      changeFrequency: 'daily',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/event`,
-      lastModified: '2025-07-02',
-    },
-    {
-      url: `${baseUrl}/partner`,
-      lastModified: '2025-07-02',
-    },
-    {
-      url: `${baseUrl}/payback`,
-      lastModified: '2025-07-02',
-    },
-    {
-      url: `${baseUrl}/intro`,
-      lastModified: '2025-07-02',
-    },
-    {
-      url: `${baseUrl}/search`,
-      lastModified: '2025-07-02',
-    },
-    {
-      url: `${baseUrl}/history`,
-      lastModified: '2025-07-02',
-    },
+  const staticPaths = [
+    '',               // /
+    'event',
+    'partner',
+    'payback',
+    'intro',
+    'login',
+    'signup'
   ];
+
+  const now = new Date().toISOString().split('T')[0];
+
+  const routes: MetadataRoute.Sitemap = staticPaths.map((path) => ({
+    url: `${baseUrl}/${path}`,
+    lastModified: now,
+    changeFrequency: path === '' ? 'daily' : 'weekly',
+    priority: path === '' ? 1.0 : 0.7,
+  }));
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
