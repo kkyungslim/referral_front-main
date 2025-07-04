@@ -1,11 +1,11 @@
 import { type MetadataRoute } from 'next';
 
 export async function GET(): Promise<Response> {
-  const baseUrl = 'https://www.tetherbase.io';
+  const baseUrl = 'https://tetherbase.io';
 
   const staticPaths = [
     '',               // /
-    'event',
+    'event',g
     'partner',
     'payback',
     'intro',
