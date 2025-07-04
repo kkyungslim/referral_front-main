@@ -1,6 +1,7 @@
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import '@/assets/css/swiper.css'
 import phone01 from '@/assets/images/phone01.png';
 import phone01_01 from '@/assets/images/phone01_01.png';
 import phone02 from '@/assets/images/phone02.png';
@@ -79,6 +80,7 @@ function PaybackRewardStep() {
                   {image.title}
                 </h4>
                 <Image
+                  className={'mx-auto'}
                   src={image.image}
                   alt={`테더베이스 STEP ${index}`}
                   width={350}
@@ -89,7 +91,7 @@ function PaybackRewardStep() {
                       ${index === 0 ? '' : index === 2 ? '' : ''}`}
                   >
                     <Image
-                      className={'subImg'}
+                      className={'subImg mx-auto'}
                       src={image.subImage}
                       alt={`테더베이스 STEP ${index}`}
                       width={350}
