@@ -85,16 +85,27 @@ export default async function RootLayout({
           }),
         }}
       />
-      <Script src="//wcs.naver.net/wcslog.js" strategy="beforeInteractive"></Script>
-      <Script strategy="lazyOnload">
-        {`
-          if(!wcs_add) var wcs_add = {};
-          wcs_add["wa"] = "12c3b79398b9170";
-          if(window.wcs) {
+      <Script
+        id="naver-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+      (function() {
+        var wcs_add = {};
+        wcs_add["wa"] = "12c3b79398b9170";
+        var wcs_script = document.createElement("script");
+        wcs_script.src = "//wcs.naver.net/wcslog.js";
+        wcs_script.async = true;
+        wcs_script.onload = function () {
+          if (window.wcs) {
             wcs_do();
           }
-         `}
-      </Script>
+        };
+        document.head.appendChild(wcs_script);
+      })();
+    `,
+        }}
+      />
     </head>
     <body className={`${pretendard.className} antialiased`}>
     <NextTopLoader color="#ff6900" showSpinner={false} height={2} />
