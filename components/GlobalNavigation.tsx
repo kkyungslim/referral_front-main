@@ -14,6 +14,7 @@ const pcNavItem: NavItem[] = [
   { name: '제휴 거래소', href: '/partner' },
   { name: '서비스 소개', href: '/intro' },
   { name: '페이백 테스트', href: '/payback' },
+  { name: '이벤트', href: '/event' },
 ];
 
 const mobileNavItem: MobileNavItem[] = [
