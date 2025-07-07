@@ -7,12 +7,13 @@ import { DefaultProps } from '@/lib/types';
 import eventBanner from '@/assets/images/eventbanner.png';
 
 const tabData = [
-  { value: 'ByBit' },
+
   { value: 'Bitget' },
-  { value: 'BingX' },
-  { value: 'OKX' },
   { value: 'Gate' },
+  { value: 'BingX' },
   { value: 'HTX' },
+  { value: 'OKX' },
+  { value: 'ByBit' },
 ];
 
 function EventTab({ eventList }: DefaultProps) {
@@ -25,7 +26,7 @@ function EventTab({ eventList }: DefaultProps) {
             거래소에서 진행하고 있는 이벤트입니다.
           </p>
         </div>
-        <Tabs defaultValue="ByBit" className="w-full">
+        <Tabs defaultValue="Bitget" className="w-full">
           <ScrollArea className="w-full whitespace-nowrap">
             <TabsList className="w-full bg-transparent rounded-none p-0 gap-3 border-b-3">
               {tabData.map((item) => (
