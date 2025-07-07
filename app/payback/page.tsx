@@ -26,12 +26,19 @@ export const metadata: Metadata = {
     siteName: '테더베이스',
     images: [
       {
-        url: 'https://tetherbase.io/og-payback.jpg', // 없는 경우 대체 이미지 경로 지정
-        alt: '페이백 테스트 예시 이미지',
+        url: 'https://tetherbase.io/og-image.jpg',
+        alt: '테더베이스 대표 이미지',
       },
     ],
     locale: 'ko_KR',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '페이백 테스트 - 테더베이스',
+    description:
+      '거래 금액과 수수료율만 입력하면, 테더베이스의 셀퍼럴 기반 리워드를 실시간 계산해드립니다.',
+    images: ['https://tetherbase.io/og-image.jpg'],
   },
 };
 

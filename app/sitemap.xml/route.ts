@@ -1,3 +1,4 @@
+// app/sitemap.xml/route.ts
 import { type MetadataRoute } from 'next';
 
 export async function GET(): Promise<Response> {
@@ -9,8 +10,6 @@ export async function GET(): Promise<Response> {
     'partner',
     'payback',
     'intro',
-    'login',
-    'signup'
   ];
 
   const now = new Date().toISOString().split('T')[0];
@@ -24,17 +23,13 @@ export async function GET(): Promise<Response> {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    routes
-      .map(
-        (route) => `
+    routes.map((route) => `
   <url>
     <loc>${route.url}</loc>
     <lastmod>${route.lastModified}</lastmod>
-    ${route.changeFrequency ? `<changefreq>${route.changeFrequency}</changefreq>` : ''}
-    ${route.priority ? `<priority>${route.priority}</priority>` : ''}
-  </url>`,
-      )
-      .join('\n') +
+    <changefreq>${route.changeFrequency}</changefreq>
+    <priority>${route.priority}</priority>
+  </url>`).join('\n') +
     `\n</urlset>`;
 
   return new Response(xml, {

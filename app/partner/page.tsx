@@ -14,9 +14,20 @@ export const metadata: Metadata = {
     description: '테더베이스에서 셀퍼럴이 가능한 제휴 거래소 안내',
     url: 'https://tetherbase.io/partner',
     siteName: '테더베이스',
-    images: [{ url: 'https://tetherbase.io/og-partner.jpg', alt: '거래소 리스트 이미지' }],
+    images: [
+      {
+        url: 'https://tetherbase.io/og-image.jpg', // 통일된 이미지
+        alt: '테더베이스 대표 이미지',
+      },
+    ],
     locale: 'ko_KR',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '제휴 거래소 - 테더베이스',
+    description: '테더베이스에서 셀퍼럴이 가능한 제휴 거래소 안내',
+    images: ['https://tetherbase.io/og-image.jpg'],
   },
 };
 

@@ -14,9 +14,20 @@ export const metadata: Metadata = {
     description: '최신 거래소 이벤트 및 셀퍼럴 페이백 정보 제공',
     url: 'https://tetherbase.io/event',
     siteName: '테더베이스',
-    images: [{ url: 'https://tetherbase.io/og-event.jpg', alt: '이벤트 대표 이미지' }],
+    images: [
+      {
+        url: 'https://tetherbase.io/og-image.jpg',
+        alt: '테더베이스 대표 이미지',
+      },
+    ],
     locale: 'ko_KR',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '이벤트 안내 - 테더베이스',
+    description: '최신 거래소 이벤트 및 셀퍼럴 페이백 정보 제공',
+    images: ['https://tetherbase.io/og-image.jpg'],
   },
 };
 
