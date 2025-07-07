@@ -85,20 +85,16 @@ export default async function RootLayout({
           }),
         }}
       />
-      <Script src="//wcs.naver.net/wcslog.js" strategy="afterInteractive" />
-      <Script
-        id="wcs"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-        if(!wcs_add) var wcs_add = {};
-        wcs_add["wa"] = "12c3b79398b9170";
-        if(window.wcs) {
-          wcs_do();
-        }
-      `,
-        }}
-      />
+      <Script src="//wcs.naver.net/wcslog.js" strategy="beforeInteractive"></Script>
+      <Script strategy="lazyOnload">
+        {`
+          if(!wcs_add) var wcs_add = {};
+          wcs_add["wa"] = "12c3b79398b9170";
+          if(window.wcs) {
+            wcs_do();
+          }
+         `}
+      </Script>
     </head>
     <body className={`${pretendard.className} antialiased`}>
     <NextTopLoader color="#ff6900" showSpinner={false} height={2} />
