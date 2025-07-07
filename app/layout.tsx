@@ -5,38 +5,27 @@ import 'swiper/css';
 import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
+import Script from 'next/script';
 
 const pretendard = localFont({ src: '../assets/PretendardVariable.woff2' });
+
 export const metadata: Metadata = {
-  title: '테더베이스 - 최고의 셀퍼럴 페이백 플랫폼',
-  description:
-    '테더베이스에서 셀퍼럴로 거래하고 최대 페이백을 받으세요. Bitget, Gate, BingX 등 제휴 거래소 이벤트 제공.',
+  title: '이벤트 안내 - 테더베이스',
+  description: 'Bitget, Gate 등 거래소 페이백 이벤트와 셀퍼럴 프로모션을 한눈에 확인하세요.',
   keywords: [
     '테더베이스',
-    'Tetherbase',
     '셀퍼럴',
-    '셀퍼럴 거래소',
-    '셀퍼럴 페이백',
-    '페이백 거래소',
-    '거래소 이벤트',
-    '비트겟 이벤트',
-    '게이트 이벤트',
+    '레퍼럴',
+    '비트겟',
+    '비트겟 수수료',
+    '게이트 수수료',
+    '페이백 플랫폼',
+    '거래소 수수료 환급',
   ],
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-icon.png',
-    other: [
-      {
-        rel: 'icon',
-        url: '/icon.png',
-      },
-    ],
-  },
   openGraph: {
-    title: '테더베이스 - 최고의 셀퍼럴 페이백 플랫폼',
-    description:
-      '셀퍼럴 기반으로 Bitget, Gate, BingX 등 다양한 거래소의 이벤트와 수수료 페이백 제공!',
-    url: 'https://tetherbase.io',
+    title: '이벤트 안내 - 테더베이스',
+    description: '최신 거래소 이벤트 및 셀퍼럴 페이백 정보 제공',
+    url: 'https://tetherbase.io/event',
     siteName: '테더베이스',
     images: [
       {
@@ -47,27 +36,44 @@ export const metadata: Metadata = {
     locale: 'ko_KR',
     type: 'website',
   },
-  verification: {
-    google: 'QT1g6o094F9SSL4-rE23PlY8DookiBihMaZC6Fdk9pg',
+  twitter: {
+    card: 'summary_large_image',
+    title: '이벤트 안내 - 테더베이스',
+    description: '최신 거래소 이벤트 및 셀퍼럴 페이백 정보 제공',
+    images: ['https://tetherbase.io/og-image.jpg'],
   },
-  other: {
-    'naver-site-verification': '0879f97f06f54f3ac4a28a4609c5dea03b6a3539',
-  }
 };
 
 export default async function RootLayout({
-  children,
-}: Readonly<{
+                                           children,
+                                         }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${pretendard.className} antialiased`}>
-        <NextTopLoader color="#ff6900" showSpinner={false} height={2} />
-        {children}
-        <Analytics/>
-        <Footer></Footer>
-      </body>
+    <html lang="ko">
+    <head>
+      {/* Schema.org 구조화 데이터 (텔레그램만 포함) */}
+      <Script
+        id="json-ld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: '테더베이스',
+            url: 'https://tetherbase.io',
+            logo: 'https://tetherbase.io/og-image.jpg',
+          }),
+        }}
+      />
+    </head>
+    <body className={`${pretendard.className} antialiased`}>
+    <NextTopLoader color="#ff6900" showSpinner={false} height={2} />
+    {children}
+    <Analytics />
+    <Footer />
+    </body>
     </html>
   );
 }

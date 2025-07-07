@@ -25,12 +25,19 @@ export const metadata: Metadata = {
     siteName: '테더베이스',
     images: [
       {
-        url: 'https://tetherbase.io/og-intro.jpg', // 필요 시 public 폴더에 이미지 업로드
-        alt: '테더베이스 플랫폼 소개 이미지',
+        url: 'https://tetherbase.io/og-image.jpg', // ← 통일된 이미지
+        alt: '테더베이스 대표 이미지',
       },
     ],
     locale: 'ko_KR',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '서비스 소개 - 테더베이스',
+    description:
+      '테더베이스는 글로벌 제휴 거래소 기반 수수료 페이백 시스템을 제공합니다. 누구나 간편하게 셀퍼럴로 리워드를 받을 수 있습니다.',
+    images: ['https://tetherbase.io/og-image.jpg'],
   },
 };
 
