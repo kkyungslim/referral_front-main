@@ -12,7 +12,7 @@ const pretendard = localFont({ src: '../assets/PretendardVariable.woff2' });
 export const metadata: Metadata = {
   title: '테더베이스 - 최고의 셀퍼럴 페이백 플랫폼',
   description:
-    '테더베이스에서 셀퍼럴로 거래하고 최대 페이백을 받으세요. Bitget, Gate, BingX 등 제휴 거래소 이벤트 제공.',
+    '테더베이스에서 셀퍼럴로 거래하고 최대 페이백을 받으세요. 비트겟, 게이트, 빙엑스 등 제휴 거래소 이벤트 제공.',
   keywords: [
     '셀퍼럴',
     '레퍼럴',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '테더베이스 - 최고의 셀퍼럴 페이백 플랫폼',
     description:
-      '셀퍼럴 기반으로 Bitget, Gate, BingX 등 다양한 거래소의 이벤트와 수수료 페이백 제공!',
+      '셀퍼럴 기반으로 비트겟, 게이트, 빙엑스 등 다양한 거래소의 이벤트와 수수료 페이백 제공!',
     url: 'https://tetherbase.io',
     siteName: '테더베이스',
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '테더베이스 - 최고의 셀퍼럴 페이백 플랫폼',
     description:
-      'Bitget, Gate, BingX 제휴 거래소의 수수료를 셀퍼럴로 페이백 받으세요.',
+      '비트겟, 게이트, 빙엑스 제휴 거래소의 수수료를 셀퍼럴로 페이백 받으세요.',
     images: ['https://tetherbase.io/og-image.jpg'],
   },
   icons: {

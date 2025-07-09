@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '회원가입 - 테더베이스',
     description:
-      '테더베이스에 지금 가입하고 거래소 수수료의 최대 80%까지 리워드를 받아보세요. Bitget, Gate 등 다양한 거래소 지원!',
+      '테더베이스에 지금 가입하고 거래소 수수료의 최대 80%까지 리워드를 받아보세요. 비트겟, 게이트, 빙엑스 등 다양한 거래소 지원!',
     url: 'https://tetherbase.io/register',
     siteName: '테더베이스',
     images: [
