@@ -7,8 +7,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '이벤트 안내 - 테더베이스',
-  description: 'Bitget, Gate 등 거래소 페이백 이벤트와 셀퍼럴 프로모션을 한눈에 확인하세요.',
-  keywords: ['거래소 이벤트', '테더베이스 이벤트', '셀퍼럴 이벤트', 'Bitget 이벤트'],
+  description: '비트겟, 게이트, 빙엑스 등 거래소 페이백 이벤트와 셀퍼럴 프로모션을 한눈에 확인하세요.',
+  keywords: ['거래소 이벤트', '테더베이스 이벤트', '셀퍼럴 이벤트', '비트겟 이벤트'],
   openGraph: {
     title: '이벤트 안내 - 테더베이스',
     description: '최신 거래소 이벤트 및 셀퍼럴 페이백 정보 제공',

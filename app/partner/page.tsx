@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '제휴 거래소 - 테더베이스',
-  description: '테더베이스와 제휴된 거래소 목록을 확인하세요. Bitget, Gate, BingX 등 셀퍼럴 가능한 거래소 소개.',
+  description: '테더베이스와 제휴된 거래소 목록을 확인하세요. 비트겟, 게이트, 빙엑스 등 셀퍼럴 가능한 거래소 소개.',
   keywords: ['제휴 거래소', 'Bitget 셀퍼럴', 'Gate 제휴', '테더베이스 파트너'],
   openGraph: {
     title: '제휴 거래소 - 테더베이스',
