@@ -1,10 +1,11 @@
-// app/sitemap.xml/route.ts
+// app/ssr.xml/route.ts
 import { type MetadataRoute } from 'next';
 
 export async function GET(): Promise<Response> {
   const baseUrl = 'https://tetherbase.io';
+  const now = new Date().toISOString().split('T')[0];
 
-  const staticPaths = [
+  const paths = [
     '',
     'event',
     'partner',
@@ -18,9 +19,7 @@ export async function GET(): Promise<Response> {
     'partner/OKXDetail',
   ];
 
-  const now = new Date().toISOString().split('T')[0];
-
-  const routes: MetadataRoute.Sitemap = staticPaths.map((path) => ({
+  const urls: MetadataRoute.Sitemap = paths.map((path) => ({
     url: `${baseUrl}${path ? `/${path}` : ''}`,
     lastModified: now,
     changeFrequency: path === '' ? 'daily' : 'weekly',
@@ -29,12 +28,12 @@ export async function GET(): Promise<Response> {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    routes.map((route) => `
+    urls.map((u) => `
   <url>
-    <loc>${route.url}</loc>
-    <lastmod>${route.lastModified}</lastmod>
-    <changefreq>${route.changeFrequency}</changefreq>
-    <priority>${route.priority}</priority>
+    <loc>${u.url}</loc>
+    <lastmod>${u.lastModified}</lastmod>
+    <changefreq>${u.changeFrequency}</changefreq>
+    <priority>${u.priority}</priority>
   </url>`).join('\n') +
     `\n</urlset>`;
 
