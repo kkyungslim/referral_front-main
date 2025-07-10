@@ -3,17 +3,17 @@ import localFont from 'next/font/local';
 import './globals.css';
 import 'swiper/css';
 import Footer from '@/components/Footer';
-import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import Script from 'next/script';
 import FaceBookPixel from '@/components/FaceBookPixel';
+import { Metadata } from 'next';
 
 const pretendard = localFont({ src: '../assets/PretendardVariable.woff2' });
 
 export const metadata: Metadata = {
   title: '테더베이스 - 최고의 셀퍼럴 페이백 플랫폼',
   description:
-    '테더베이스에서 셀퍼럴로 거래하고 최대 페이백을 받으세요. 비트겟, 게이트, 빙엑스 등 제휴 거래소 이벤트 제공.',
+    '거래소 공식 계약을 통한 페이백이 가능한 테더베이스는 비트겟, OKX(오케이엑스) ,빙엑스, 게이트, 바이비트, HTX(후오비) 등을 통해 사용자 1인당 평균 환급액 86만원 등 높은 혜택을 기대할 수 있습니다.',
   keywords: [
     '셀퍼럴',
     '레퍼럴',
@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://tetherbase.io/og-image.jpg',
+        width: 1200,
+        height: 630,
         alt: '테더베이스 대표 이미지',
       },
     ],
@@ -48,30 +50,95 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-icon.png',
-    other: [
-      {
-        rel: 'icon',
-        url: '/icon.png',
-      },
-    ],
+    other: [{ rel: 'icon', url: '/icon.png' }],
   },
   verification: {
     google: 'QT1g6o094F9SSL4-rE23PlY8DookiBihMaZC6Fdk9pg',
-  },
-  other: {
-    'naver-site-verification': '0879f97f06f54f3ac4a28a4609c5dea03b6a3539',
+    other: {
+      'naver-site-verification': '0879f97f06f54f3ac4a28a4609c5dea03b6a3539',
+    },
   },
 };
 
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Organization",
+        name: "비트겟 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        image: "/bitget.jpg",
+        url: "https://tetherbase.io/partner/BitgetDetail",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Organization",
+        name: "게이트 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        image: "/gate.jpg",
+        url: "https://tetherbase.io/partner/GateDetail",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Organization",
+        name: "빙엑스 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        image: "/bingx.jpg",
+        url: "https://tetherbase.io/partner/BingXDetail",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      item: {
+        "@type": "Organization",
+        name: "htx 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        image: "/okx.jpg",
+        url: "https://tetherbase.io/partner/HTXDetail",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      item: {
+        "@type": "Organization",
+        name: "OKX 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        image: "/okx.jpg",
+        url: "https://tetherbase.io/partner/OKXDetail",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 6,
+      item: {
+        "@type": "Organization",
+        name: "바이비트 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        image: "/bybit.jpg",
+        url: "https://tetherbase.io/partner/BybitDetail",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
-                                           children,
-                                         }: Readonly<{
-  children: React.ReactNode;
-}>) {
+                                     children,
+                                   }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ko">
     <head>
-      {/* Schema.org 구조화 데이터 (텔레그램만 포함) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(itemListSchema),
+        }}
+      />
       <Script
         id="json-ld"
         type="application/ld+json"
@@ -82,7 +149,7 @@ export default function RootLayout({
             '@type': 'Organization',
             name: '테더베이스',
             url: 'https://tetherbase.io',
-            logo: 'https://tetherbase.io/og-image.jpg',
+            logo: '/og-image.jpg',
           }),
         }}
       />
@@ -91,23 +158,22 @@ export default function RootLayout({
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-      (function() {
-        var wcs_add = {};
-        wcs_add["wa"] = "12c3b79398b9170";
-        var wcs_script = document.createElement("script");
-        wcs_script.src = "//wcs.naver.net/wcslog.js";
-        wcs_script.async = true;
-        wcs_script.onload = function () {
-          if (window.wcs) {
-            wcs_do();
-          }
-        };
-        document.head.appendChild(wcs_script);
-      })();
-    `,
+              (function() {
+                var wcs_add = {};
+                wcs_add["wa"] = "12c3b79398b9170";
+                var wcs_script = document.createElement("script");
+                wcs_script.src = "//wcs.naver.net/wcslog.js";
+                wcs_script.async = true;
+                wcs_script.onload = function () {
+                  if (window.wcs) {
+                    wcs_do();
+                  }
+                };
+                document.head.appendChild(wcs_script);
+              })();
+            `,
         }}
       />
-      {/* Meta Pixel Script */}
       <Script id="facebook-pixel" strategy="afterInteractive">
         {`
             !function(f,b,e,v,n,t,s)
@@ -124,14 +190,16 @@ export default function RootLayout({
       </Script>
     </head>
     <body className={`${pretendard.className} antialiased`}>
-    {/* Meta Pixel noscript fallback */}
     <noscript>
-      <img height="1" width="1" style={{ display: 'none' }}
-           src="https://www.facebook.com/tr?id=721640497495619&ev=PageView&noscript=1"
+      <img
+        height="1"
+        width="1"
+        style={{ display: 'none' }}
+        src="https://www.facebook.com/tr?id=721640497495619&ev=PageView&noscript=1"
       />
     </noscript>
     <NextTopLoader color="#ff6900" showSpinner={false} height={2} />
-    <FaceBookPixel/>
+    <FaceBookPixel />
     {children}
     <Analytics />
     <Footer />
