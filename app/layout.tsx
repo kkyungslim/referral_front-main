@@ -69,7 +69,7 @@ const itemListSchema = {
       position: 1,
       item: {
         "@type": "Organization",
-        name: "비트겟 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        name: "비트겟 정식 제휴된 유일 페이백 셀퍼럴 최대 수수료 환급지원",
         image: "/bitget.jpg",
         url: "https://tetherbase.io/partner/BitgetDetail",
       },
@@ -79,7 +79,7 @@ const itemListSchema = {
       position: 2,
       item: {
         "@type": "Organization",
-        name: "게이트 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        name: "게이트 정식 제휴된 유일 페이백 셀퍼럴 최대 수수료 환급지원",
         image: "/gate.jpg",
         url: "https://tetherbase.io/partner/GateDetail",
       },
@@ -89,7 +89,7 @@ const itemListSchema = {
       position: 3,
       item: {
         "@type": "Organization",
-        name: "빙엑스 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        name: "빙엑스 정식 제휴된 유일 페이백 셀퍼럴 최대 수수료 환급지원",
         image: "/bingx.jpg",
         url: "https://tetherbase.io/partner/BingXDetail",
       },
@@ -99,7 +99,7 @@ const itemListSchema = {
       position: 4,
       item: {
         "@type": "Organization",
-        name: "htx 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        name: "htx 정식 제휴된 유일 페이백 셀퍼럴 최대 수수료 환급지원",
         image: "/okx.jpg",
         url: "https://tetherbase.io/partner/HTXDetail",
       },
@@ -109,7 +109,7 @@ const itemListSchema = {
       position: 5,
       item: {
         "@type": "Organization",
-        name: "OKX 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        name: "OKX 정식 제휴된 유일 페이백 셀퍼럴 최대 수수료 환급지원",
         image: "/okx.jpg",
         url: "https://tetherbase.io/partner/OKXDetail",
       },
@@ -119,7 +119,7 @@ const itemListSchema = {
       position: 6,
       item: {
         "@type": "Organization",
-        name: "바이비트 유일한 공식 계약 페이백 최대 셀퍼럴 보장",
+        name: "바이비트 정식 제휴된 유일 페이백 셀퍼럴 최대 수수료 환급지원",
         image: "/bybit.jpg",
         url: "https://tetherbase.io/partner/BybitDetail",
       },
