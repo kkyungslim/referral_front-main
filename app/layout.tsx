@@ -13,7 +13,7 @@ const pretendard = localFont({ src: '../assets/PretendardVariable.woff2' });
 export const metadata: Metadata = {
   title: '테더베이스 - 최고의 셀퍼럴 페이백 플랫폼',
   description:
-    '거래소 공식 계약을 통한 페이백이 가능한 테더베이스는 비트겟, OKX(오케이엑스) ,빙엑스, 게이트, 바이비트, HTX(후오비) 등을 통해 사용자 1인당 평균 환급액 86만원 등 높은 혜택을 기대할 수 있습니다.',
+    '거래소 공식 계약을 통한 페이백이 가능한 테더베이스는 비트겟(Bitget), OKX(오케이엑스) ,빙엑스(BingX), 게이트(Gate), 바이비트(Bybit), HTX(후오비) 등을 통해 사용자 1인당 평균 환급액 86만원 등 높은 혜택을 기대할 수 있습니다.',
   keywords: [
     '셀퍼럴',
     '레퍼럴',

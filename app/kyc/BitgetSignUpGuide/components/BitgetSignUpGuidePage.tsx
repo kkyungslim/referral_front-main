@@ -1,4 +1,4 @@
-import BitgetSignGuide01 from '@/assets/images/BitgetSignGuide01.jpg';
+import BitgetSignGuide01 from '@/assets/images/BitgetSignGuide01.png';
 import BitgetSignGuide02 from '@/assets/images/BitgetSignGuide02.jpg';
 import BitgetSignGuide03 from '@/assets/images/BitgetSignGuide03.jpg';
 import BitgetSignGuide04 from '@/assets/images/BitgetSignGuide04.jpg';

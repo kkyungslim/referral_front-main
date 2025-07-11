@@ -34,7 +34,7 @@ function StickyGuide({ tabRefs, tabs }: StickyGuideProps) {
           className={
             'bg-bg1 border-none p-3 md:p-6 gap-3 md:gap-6 cursor-pointer'
           }
-          onClick={() => router.push('/kyc/GateioAccountFAQ')}
+          onClick={() => router.push('/kyc/GateAccountFAQ')}
         >
           <div className="flex justify-between items-start gap-10">
             <div
