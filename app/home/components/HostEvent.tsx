@@ -54,7 +54,7 @@ function HostEvent() {
       return {
         ...randomExchange,
         uidNumber: Math.floor(Math.random() * 8999999999) + 1000000000, // 10자리 UID
-        paybackSum: Math.floor(Math.random() * 5000) + 1,
+        paybackSum: Math.floor(Math.random() * (1800 - 20 + 1)) + 20,
       };
     });
 

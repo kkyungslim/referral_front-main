@@ -5,16 +5,13 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
-import Link from 'next/link';
 import { PartnerData } from '@/lib/types';
 
 function UIDCarousel({
   partnerData,
-  setPartnerActive,
 }: {
   partnerData: PartnerData[];
   partnerActive: PartnerData;
-  setPartnerActive: (partner: PartnerData) => void;
 }) {
   return (
     <div className="flex items-center gap-5 w-full">
@@ -42,15 +39,13 @@ function UIDCarousel({
                 <CarouselItem
                   className="basis-auto pl-0 last-of-type:mr-3"
                   key={`uid-search-carousel-${item.id}-${i}`}
-                  onClick={() => setPartnerActive(item)}
                 >
-                  <Link
-                    href="#"
+                  <div
                     className="text-base inline-block bg-warning px-2 rounded-md text-center text-white font-bold"
                   >
                     {item.name}{' '}
                     <span className="text-black">{item.amount}</span>
-                  </Link>
+                  </div>
                 </CarouselItem>
               )),
             )}
