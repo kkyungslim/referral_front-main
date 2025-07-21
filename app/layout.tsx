@@ -11,7 +11,7 @@ import { Metadata } from 'next';
 const pretendard = localFont({ src: '../assets/PretendardVariable.woff2' });
 
 export const metadata: Metadata = {
-  title: '테더베이스 - 최고의 셀퍼럴 페이백 플랫폼',
+  title: '테더베이스 - 최고의 수수료 페이백 OKX, 바이비트,비트겟, 빙엑스, 게이트 페이백 셀퍼럴 플랫폼',
   description:
     '거래소 공식 계약을 통한 페이백이 가능한 테더베이스는 비트겟(Bitget), OKX(오케이엑스) ,빙엑스(BingX), 게이트(Gate), 바이비트(Bybit), HTX(후오비) 등을 통해 사용자 1인당 평균 환급액 86만원 등 높은 혜택을 기대할 수 있습니다.',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     '거래소 수수료 환급',
   ],
   openGraph: {
-    title: '테더베이스 - 최고의 셀퍼럴 페이백 플랫폼',
+    title: '테더베이스 - 최고의 수수료 페이백 OKX, 바이비트,비트겟, 빙엑스, 게이트 페이백 셀퍼럴 플랫폼',
     description:
       '셀퍼럴 기반으로 비트겟, 게이트, 빙엑스 등 다양한 거래소의 이벤트와 수수료 페이백 제공!',
     url: 'https://tetherbase.io',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '테더베이스 - 최고의 셀퍼럴 페이백 플랫폼',
+    title: '테더베이스 - 최고의 수수료 페이백 OKX, 바이비트,비트겟, 빙엑스, 게이트 페이백 셀퍼럴 플랫폼',
     description:
       '비트겟, 게이트, 빙엑스 제휴 거래소의 수수료를 셀퍼럴로 페이백 받으세요.',
     images: ['https://tetherbase.io/og-image.jpg'],
