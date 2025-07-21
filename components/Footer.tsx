@@ -1,7 +1,8 @@
 'use client';
 import LogoBlackIcon from '@/components/icons/LogoBlackIcon';
 import Link from 'next/link';
-import YouTubeIcon from '@/components/icons/YouTubeIcon';
+import InstagramIcon from '@/assets/icons/InstargramIcon.png';
+import TistoryIcon from '@/assets/icons/TistoryIcon.png';
 import TelegramIcon from '@/components/icons/TelegramIcon';
 import { usePathname } from 'next/navigation';
 import LogoWhiteIcon from '@/components/icons/LogoWhiteIcon';
@@ -21,6 +22,8 @@ import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import TermsOfService from '@/components/TermsOfService';
 import PrivacyPolicy from '@/components/PrivacyPolicy';
+import { Import } from 'lucide-react';
+import Image from 'next/image';
 
 const thisYear = new Date().getFullYear();
 
@@ -115,8 +118,14 @@ function Footer() {
             {/*<Link href={'/'}>*/}
             {/*  <YouTubeIcon width={35} height={23} />*/}
             {/*</Link>*/}
-            <Link href={'https://t.me/a0s2d3f4w1q'}>
+            <Link href={'https://t.me/a0s2d3f4w1q'} target={'_blank'}>
               <TelegramIcon width={35} height={35} />
+            </Link>
+            <Link href={'https://www.instagram.com/tetherbase_official/'} target={'_blank'}>
+              <Image src={InstagramIcon} alt={'Instagram'} width={35} height={35}/>
+            </Link>
+            <Link href={'https://tetherbase.tistory.com/'} target={'_blank'}>
+              <Image src={TistoryIcon} alt={'Tistory'} width={35} height={35}/>
             </Link>
           </div>
         </div>
