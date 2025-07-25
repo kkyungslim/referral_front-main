@@ -1,6 +1,6 @@
-function LogoIcon({width, height}: {width: number; height: number}) {
+function LogoIcon({width, height, className}: {width?: number; height?: number; className?: string}) {
   return (
-    <svg width={width} height={height} viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg width={width} height={height} viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}
          xmlnsXlink="http://www.w3.org/1999/xlink">
       <path
         d="M75 159.154C116.421 159.154 150 125.576 150 84.1543C150 42.7329 116.421 9.1543 75 9.1543C33.5786 9.1543 0 42.7329 0 84.1543C0 125.576 33.5786 159.154 75 159.154Z"

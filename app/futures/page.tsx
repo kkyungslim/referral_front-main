@@ -1,16 +1,16 @@
 import { Fragment } from 'react';
 import GlobalNavigation from '@/components/GlobalNavigation';
 import { APIuserInfo } from '@/lib/API';
-import InvitePage from '@/app/invite/component/InvitePage';
+import FuturesPage from '@/app/futures/component/FuturesPage';
 
-async function Invite() {
+async function Futures() {
   const user = await APIuserInfo();
   return(
     <Fragment>
       <GlobalNavigation user={user}/>
-      <InvitePage/>
+      <FuturesPage/>
     </Fragment>
   )
 }
 
-export default Invite;
+export default Futures;

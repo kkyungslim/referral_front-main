@@ -11,7 +11,7 @@ function ArrowBottomIcon({
 }) {
   return (
     <svg
-      width={width}
+      width={`${width}px`}
       height={height}
       viewBox="0 0 14 10"
       fill="none"
