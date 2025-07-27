@@ -311,7 +311,7 @@ function FuturesPage({user}:DefaultProps) {
       <section>
         <div className="container mx-auto">
           <Link
-            href="/signup"
+            href={user ? '/uidlink' :'/signup'}
             className="mx-auto flex items-center justify-center max-w-[450px] border-[3px] border-[#FF6A00] rounded-xl py-2 gap-2 my-10 md:my-20 bg-white shadow-[0_5px_10px_rgba(0,0,0,0.2)]"
           >
             <LogoIcon className="w-[25px] h-[25px] md:w-[30px] md:h-[30px]" />
