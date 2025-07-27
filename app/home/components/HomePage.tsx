@@ -7,10 +7,12 @@ import { DefaultProps } from '@/lib/types';
 import HomeBanner from '@/app/home/components/HomeBanner';
 import PaybackInfoCard from '@/app/home/components/PaybackInfoCard';
 import AuthenticatedView from '@/app/home/components/AuthenticatedView';
+import PopUp from '@/app/home/components/PopUp';
 
 function HomePage({ user, uid, userMarketInfo, eventList }: DefaultProps) {
   return (
     <div>
+      <PopUp/>
       {!user ? (
         <UIDsearch />
       ) : uid && uid.length > 0 ? (
