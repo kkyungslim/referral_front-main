@@ -179,7 +179,7 @@ function FuturesPage({user}:DefaultProps) {
           </div>
           <Link href={user ? '/uidlink' : '/login'}>
             <Button
-              className="flex gap-2  h-fit md:has-[>svg]:px-6 py-1 md:py-2 rounded-3xl font-semibold text-lg mx-auto items-center">
+              className="flex gap-2  h-fit has-[>svg]:px-8 px-5 py-2 rounded-3xl font-semibold text-lg mx-auto items-center">
               <span>지금 무료로 받기</span>
               <ArrowBottomIcon
                 width={14}
