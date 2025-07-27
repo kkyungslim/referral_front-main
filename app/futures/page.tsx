@@ -8,7 +8,7 @@ async function Futures() {
   return(
     <Fragment>
       <GlobalNavigation user={user}/>
-      <FuturesPage/>
+      <FuturesPage user={user}/>
     </Fragment>
   )
 }
