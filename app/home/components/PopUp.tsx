@@ -50,7 +50,7 @@ function PopUp() {
   return (
     <div className="fixed top-0 bottom-0 left-0 right-0 z-50">
       <div className="absolute top-0 bottom-0 left-0 right-0 bg-black/50"></div>
-      <div className="max-w-[500px] h-fit w-full absolute top-0 bottom-0 left-0 right-0 m-auto z-10 bg-white rounded-2xl overflow-hidden">
+      <div className="max-w-[450px] h-fit w-full absolute top-0 bottom-0 left-0 right-0 m-auto z-10 bg-white rounded-2xl overflow-hidden">
         <Swiper className="mySwiper">
           <SwiperSlide>
             <Link href={'/futures'}><Image src={popupBanner01} alt="popupBanner01" /></Link>
