@@ -21,7 +21,7 @@ function FeeInfo() {
             <Card
               className={'border-primary border-3 mt-5 items-center gap-1 '}
             >
-              <h3 className={'text-primary font-bold'}>60%</h3>
+              <h3 className={'text-primary font-bold'}>54%</h3>
               <div
                 className={'text-center border-t-3 pt-2 border-primary w-full'}
               >
