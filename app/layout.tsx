@@ -11,7 +11,7 @@ import { Metadata } from 'next';
 const pretendard = localFont({ src: '../assets/PretendardVariable.woff2' });
 
 export const metadata: Metadata = {
-  title: '테더베이스 - 최고의 수수료 페이백 코인 플랫폼 래퍼럴 셀퍼',
+  title: '테더베이스 - 최고의 수수료 페이백 코인 플랫폼 래퍼럴 셀퍼럴',
   description:
     '최고의 수수료율을 보장합니다. 비트겟, 게이트, 빙엑스, htx, 바이비트, 오케이액스 공식거래 셀퍼럴 플랫폼 테더베이스',
   keywords: [
